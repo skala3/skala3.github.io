@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://skala.github.io/sitemap.xml
