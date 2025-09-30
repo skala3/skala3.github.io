@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://skala3.github.io/sitemap.xml
+Sitemap: https://siddhant-ray.github.io/sitemap.xml
