@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-09-01 16:11:00-0400
+date: 2025-06-01 16:11:00-0400
 inline: true
 ---
 
-Serving as a Reviewer for <a href="https://aaai.org/conference/aaai/aaai-26/"> AAAI'26 </a>.
+Started working as an AI Engineer Intern at <a href="https://www.juniper.net/us/en.html"> Juniper Networks </a>.

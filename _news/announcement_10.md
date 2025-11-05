@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-06-16 16:11:00-0400
+date: 2025-04-01 16:11:00-0400
 inline: true
 ---
 
-Starting my research internship at Microsoft, Redmond jointly working with Microsoft Research and Outlook.
+For Spring 2025, worked with Prof. Biwei Huang to design a pipeline of AI agents with CrewAI that autonomously generates, ranks, and validates causal hypotheses.

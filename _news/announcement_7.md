@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-01-27 16:11:00-0400
+date: 2022-02-01 16:11:00-0400
 inline: true
 ---
 
-Serving as a Reviewer for <a href="https://icml.cc/Conferences/2025/ProgramCommittee"> ICML'25 </a>.
+Promoted to Sr. Data Scientist at American Express at the Marketing Optimisation Data Science team.

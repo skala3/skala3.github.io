@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2025-05-21 16:11:00-0400
+date: 2025-01-01 16:11:00-0400
 inline: true
 ---
-
-Selected and awarded travel grant for the inaugural <a href="https://ldos.utexas.edu/events/researchschool"> PhD Research School </a> held by the <a href="https://ldos.utexas.edu/"> LDOS expedition </a> at UT Ausin.
+For Winter 2025, I worked as Graduate Student Researcher under Prof. Armin Schwartzman to use Graph Convolutional Network and Graph Attention Network based models on cortical surface region of the
+brain, predicting crystallized intelligence from adolescent brain fMRI imaging dataset.
