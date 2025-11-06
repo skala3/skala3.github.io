@@ -1,14 +1,20 @@
 {% assign repo_url =  include.repository | split: '/' %}
 
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
-{% else %}
-  {% assign show_owner = true %}
-{% endif %}
-
-<div class="repo p-2 text-center">
+<div class="grid-sizer"></div>
+<div class="grid-item">
   <a href="https://github.com/{{ include.repository }}">
-    <img class="repo-img-light w-100" alt="{{ include.repository }}" src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url.first }}&repo={{ repo_url.last }}&count_private=true&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
-    <img class="repo-img-dark w-100" alt="{{ include.repository }}" src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url.first }}&repo={{ repo_url.last }}&count_private=true&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+    <div class="card hoverable">
+      <div class="card-body">
+        <h2 class="card-title">{{ repo_url.last }}</h2>
+        <p class="card-text text-muted">{{ repo_url.first }}</p>
+        <div class="row ml-1 mr-1 p-0">
+          <div class="github-icon">
+            <div class="icon" data-toggle="tooltip" title="Code Repository">
+              <a href="https://github.com/{{ include.repository }}"><i class="fab fa-github gh-icon"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </a>
 </div>

@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
-description: Publications by categories in reversed chronological order.
+permalink: /experience/
+title: Experience
+description: Professional experience and work history.
 years: [2025, 2024, 2022, 2020]
 nav: true
 nav_order: 1

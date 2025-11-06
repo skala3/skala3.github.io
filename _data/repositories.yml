@@ -1,12 +1,9 @@
-github_users:
-  - Siddhant-Ray
-
 github_repos:
-  - LMCache/LMCache
-  - vllm-project/production-stack
-  - relatio-nlp/relatio
-  - donbright/rust-lang-cheat-sheet
-  - nsnam/ns-3-dev-git
-  - FatjonZOGAJ/multilingual-text-analytics
-  - langchain-ai/langchain
-  - Lightning-AI/lightning
+  - skala3/LMCache
+  - skala3/vllm-production-stack
+  - skala3/relatio
+  - skala3/causal-copilot
+  - skala3/brain-intelligence-prediction
+  - skala3/marketing-mix-models
+  - skala3/customer-segmentation
+  - skala3/recommender-systems
