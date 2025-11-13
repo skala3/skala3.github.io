@@ -1,12 +1,12 @@
-<!-- ---
+---
 layout: page
 permalink: /experience/
 title: Experience
 description: Professional experience and work history.
 years: [2025, 2024, 2022, 2020]
-nav: true
+nav: false  # Set to true to enable in navigation
 nav_order: 1
---- -->
+---
 <!-- _pages/publications.md -->
 <div class="publications">
 
