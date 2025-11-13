@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /repositories/
-title: Repositories
+permalink: /projects/
+title: Projects
 description: GitHub repositories and open source contributions.
 nav: true
 nav_order: 3
