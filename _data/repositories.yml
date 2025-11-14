@@ -1,9 +1,4 @@
 github_repos:
-  - skala3/LMCache
-  - skala3/vllm-production-stack
-  - skala3/relatio
-  - skala3/causal-copilot
-  - skala3/brain-intelligence-prediction
-  - skala3/marketing-mix-models
-  - skala3/customer-segmentation
-  - skala3/recommender-systems
+  - skala3/ace-attorney-cross-exam
+  - skala3/super-mario-rl-agent
+  - skala3/people-you-may-know
