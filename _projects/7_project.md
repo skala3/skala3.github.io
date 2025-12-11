@@ -1,8 +1,11 @@
 ---
 layout: page
 title: Ace Attorney Cross-Examination
-description: Interactive courtroom game with AI-generated witnesses
-img:
+description: >
+  Built an offline Ace Attorney-inspired courtroom game where LLM-generated
+  witnesses deliver dynamic testimonies, players probe for contradictions, and
+  evidence plus health mechanics keep each case tense.
+img: assets/img/paint_styling.png
 importance: 1
 category: Misc.
 ---

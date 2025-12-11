@@ -1,7 +1,10 @@
 ---
 layout: page
 title: FRR - P4 Integrated Super - Node
-description: Linux control planes with programmble P4 dataplanes. 
+description: >
+  Integrated Linux FRR control planes with programmable P4 data planes to build
+  flexible “super-nodes’’ that marry dynamic route computation with smart,
+  decision-aware forwarding.
 img: assets/img/supernode.webp
 importance: 3
 category: Research

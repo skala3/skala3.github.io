@@ -1,8 +1,11 @@
 ---
 layout: page
 title: Maximizing Flows in Cross Traffic Networks
-description: Programmable networks to minimize packet drops.
-img:
+description: >
+  Engineered programmable P4 data planes with LFA-style rerouting to maximize
+  delivered flows under adversarial link failures, mixed priorities, and tight
+  bandwidth budgets in a graduate networking course challenge.
+img: assets/img/motion_planning.png
 importance: 3
 category: Misc.
 ---

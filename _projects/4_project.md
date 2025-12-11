@@ -1,8 +1,11 @@
 ---
 layout: page
 title: Automated Certificate Management Environment 
-description: Self-contained functional ACME client in Python.
-img:
+description: >
+  Delivered a full ACMEv2 reference implementation that automates certificate
+  issuance end-to-end with DNS-01/HTTP-01 challenges, alias handling, wildcard
+  domains, and automated revocation workflows via a self-contained Python stack.
+img: assets/img/inside_ml_systems.png
 importance: 3
 category: Misc.
 ---

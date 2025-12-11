@@ -1,7 +1,10 @@
 ---
 layout: page
 title: Multi-Label News Classification
-description: Text transformer for hierarchical label classification.
+description: >
+  Built a transformer-based news classifier plus a statistical overlap
+  estimation routine that cleans hierarchical labels, boosting accuracy on
+  ambiguous entertainment/comedy categories.
 img: assets/img/model.webp
 importance: 2
 category: Research

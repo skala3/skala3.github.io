@@ -1,8 +1,11 @@
 ---
 layout: page
 title: Super Mario RL Agent
-description: Deep Q-Network agent to complete Super Mario Bros
-img:
+description: >
+  Trained a prioritized Double DQN with frame stacking, reward shaping, and
+  epsilon scheduling to consistently finish Super Mario Bros World 1-1 entirely
+  offline, complete with checkpointing and evaluation tooling.
+img: assets/img/wildfire_smoke_detection.png
 importance: 2
 category: Misc.
 ---

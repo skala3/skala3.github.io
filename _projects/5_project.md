@@ -1,8 +1,11 @@
 ---
 layout: page
 title: Inductive Biases in CNNs and Transformers
-description: Correlating performance to inductive biases.
-img:
+description: >
+  Compared ResNet-50, ViT, and local-attention transformers on CIFAR-10 variants
+  to understand how architectural inductive biases drive generalization,
+  robustness, and sample efficiency across changing visual distributions.
+img: assets/img/kv_cache.png
 importance: 3
 category: Misc.
 ---

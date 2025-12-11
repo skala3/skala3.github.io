@@ -1,8 +1,11 @@
 ---
 layout: page
 title: People You May Know
-description: Production-ready friend recommendation system
-img:
+description: >
+  Productionized a medium-scale “people you may know’’ engine with FOAF
+  candidate generation, ensemble ranking (rules + ML), FastAPI serving, and
+  SNAP-based evaluation for precision@K, NDCG, and MRR.
+img: assets/img/mri.png
 importance: 3
 category: Misc.
 ---
