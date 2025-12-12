@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WayShield Motion Planning | Lakshya Goyal</title>
+    <meta name="author" content="Lakshya Goyal"/>
+    <meta name="description" content="Advanced motion planning algorithms for autonomous systems with obstacle avoidance and path optimization"/>
+    <meta name="keywords" content="motion planning, autonomous systems, robotics, path planning, obstacle avoidance, A* algorithm"/>
+    <meta property="og:site_name" content="Lakshya Goyal"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Lakshya Goyal | WayShield Motion Planning"/>
+    <meta property="og:url" content="https://lakshya1230.github.io/projects/4_project/"/>
+    <meta property="og:description" content="Advanced motion planning algorithms for autonomous systems with obstacle avoidance and path optimization"/>
+    <meta property="og:locale" content="en"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="WayShield Motion Planning"/>
+    <meta name="twitter:description" content="Advanced motion planning algorithms for autonomous systems with obstacle avoidance and path optimization"/>
+    <script type="application/ld+json">
+    {
+        "author": {
+          "@type": "Person",
+          "name": "Lakshya Goyal"
+        },
+        "url": "https://lakshya1230.github.io/projects/4_project/",
+        "@type": "WebSite",
+        "description": "Advanced motion planning algorithms for autonomous systems with obstacle avoidance and path optimization",
+        "headline": "WayShield Motion Planning",
+        "sameAs": ["https://github.com/lakshya1230", "https://www.linkedin.com/in/lakshya-goyal"],
+        "name": "Lakshya Goyal",
+        "@context": "https://schema.org"
+      }
+    </script>
+    
+    <!-- CSS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light"/>
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://lakshya1230.github.io/projects/4_project/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark"/>
+    
+    <!-- Custom Styles for Project Page -->
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        .tech-badge {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .feature-card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .architecture-diagram {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .flow-step {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+</head>
+
+<body class="fixed-top-nav">
+    <header>
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand title font-weight-lighter" href="/">
+                    <span class="font-weight-bold">Lakshya </span>Goyal
+                </a>
+                <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse text-right" id="navbarNav">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/projects/">Projects<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/repositories/">Repositories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/resume/">Resume</a>
+                        </li>
+                        <li class="toggle-container">
+                            <button id="light-toggle" title="Change theme">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Hero Section -->
+    <div class="project-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 font-weight-bold mb-3"><span style="font-size: 0.8em;">WayShield Motion Planning:</span> <br><span style="font-size: 0.3em;">Advanced Path Planning for Autonomous Systems</span></h1>
+                    <p class="lead mb-4">Advanced motion planning algorithms for autonomous systems with obstacle avoidance and path optimization techniques.</p>
+                    <div class="mb-3">
+                        <span class="tech-badge"><i class="fas fa-graduation-cap"></i> Course Project</span>
+                        <span class="tech-badge"><i class="fas fa-calendar"></i> 2024-2025</span>
+                        <span class="tech-badge"><i class="fas fa-robot"></i> Autonomous Systems</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="/assets/img/cyclegan.png" 
+                         class="img-fluid rounded shadow-lg" 
+                         alt="Motion Planning System" 
+                         style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="post">
+            <!-- Project Overview -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-info-circle text-primary"></i> Project Overview</h2>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            WayShield Motion Planning is a comprehensive solution for autonomous navigation systems, implementing advanced path planning 
+                            algorithms with robust obstacle avoidance and dynamic path optimization capabilities.
+                        </p>
+                        <p>
+                            This project focuses on developing efficient motion planning algorithms that can handle complex environments with dynamic 
+                            obstacles, providing safe and optimal paths for autonomous vehicles and robotic systems. The system integrates multiple 
+                            planning strategies to ensure reliable navigation in real-world scenarios.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-sitemap text-primary"></i> System Architecture</h2>
+                <div class="architecture-diagram">
+                    <h5 class="mb-3">Motion Planning Pipeline</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="flow-step">Environment Mapping</div>
+                            <div class="flow-step">Obstacle Detection</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="flow-step">Path Planning</div>
+                            <div class="flow-step">A* Algorithm</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="flow-step">Path Optimization</div>
+                            <div class="flow-step">Smoothing</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="flow-step">Trajectory Generation</div>
+                            <div class="flow-step">Control Execution</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Stack -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-cogs text-primary"></i> Technology Stack</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card feature-card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-route text-info"></i> Planning Algorithms</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> A* Pathfinding Algorithm</li>
+                                    <li><i class="fas fa-check text-success"></i> RRT (Rapidly-exploring Random Trees)</li>
+                                    <li><i class="fas fa-check text-success"></i> Dynamic Window Approach</li>
+                                    <li><i class="fas fa-check text-success"></i> Potential Field Methods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card feature-card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-shield-alt text-warning"></i> Safety & Optimization</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Collision Avoidance Systems</li>
+                                    <li><i class="fas fa-check text-success"></i> Path Smoothing Algorithms</li>
+                                    <li><i class="fas fa-check text-success"></i> Real-time Replanning</li>
+                                    <li><i class="fas fa-check text-success"></i> Multi-objective Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Techniques -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-star text-primary"></i> Key Techniques</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-search text-primary"></i> A* Pathfinding</h5>
+                                <p class="card-text">Implementation of the A* algorithm with custom heuristics for optimal path finding in grid-based environments with dynamic obstacle avoidance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-tree text-success"></i> RRT Planning</h5>
+                                <p class="card-text">Rapidly-exploring Random Trees for high-dimensional configuration spaces and complex obstacle environments with probabilistic completeness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-sync-alt text-warning"></i> Dynamic Replanning</h5>
+                                <p class="card-text">Real-time path adaptation and replanning capabilities to handle dynamic obstacles and changing environment conditions during navigation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Applications & Impact -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-globe text-primary"></i> Applications & Impact</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h5><i class="fas fa-car text-success"></i> Autonomous Vehicles</h5>
+                        <p>Enables safe and efficient navigation for autonomous vehicles in complex urban environments with dynamic traffic and pedestrian interactions.</p>
+                        
+                        <h5><i class="fas fa-industry text-info"></i> Industrial Robotics</h5>
+                        <p>Provides robust path planning for industrial robots in manufacturing environments with moving obstacles and precise positioning requirements.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5><i class="fas fa-drone text-warning"></i> UAV Navigation</h5>
+                        <p>Supports unmanned aerial vehicle navigation in cluttered environments with obstacle avoidance and mission-specific path optimization.</p>
+                        
+                        <h5><i class="fas fa-warehouse text-success"></i> Warehouse Automation</h5>
+                        <p>Facilitates efficient material handling and logistics operations in automated warehouses with dynamic inventory and human-robot collaboration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Metrics -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-chart-line text-primary"></i> Performance Features</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-clock fa-2x text-primary mb-3"></i>
+                                <h5 class="card-title">Real-time Planning</h5>
+                                <p class="card-text">Sub-second path planning and replanning capabilities for dynamic environments with moving obstacles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-bullseye fa-2x text-success mb-3"></i>
+                                <h5 class="card-title">Optimal Paths</h5>
+                                <p class="card-text">Guaranteed optimal solutions using A* algorithm with admissible heuristics for shortest path planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-shield-alt fa-2x text-warning mb-3"></i>
+                                <h5 class="card-title">Safety Guarantees</h5>
+                                <p class="card-text">Robust collision avoidance with safety margins and emergency stop capabilities for critical situations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Links -->
+            <section class="mb-5">
+                <h2 class="h3 mb-4"><i class="fas fa-external-link-alt text-primary"></i> Project Resources</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fab fa-github"></i> Source Code</h5>
+                                <p class="card-text">Access the complete WayShield Motion Planning implementation with search-based and sampling-based algorithms.</p>
+                                <a href="https://github.com/lakshya1230/WayShield-Motion-Planning" 
+                                   class="btn btn-primary" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-file-alt"></i> Documentation</h5>
+                                <p class="card-text">Comprehensive documentation covering algorithm implementations, API usage, and performance benchmarks.</p>
+                                <a href="#" class="btn btn-outline-primary" disabled>
+                                    <i class="fas fa-book"></i> View Documentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="container mt-0">
+            © Copyright 2025 Lakshya Goyal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> 
+            based on <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. 
+            Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. 
+            Last updated: August 10, 2025.
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+    <script defer src="/assets/js/zoom.js"></script>
+    <script defer src="/assets/js/common.js"></script>
+    <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script>
+    <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+</body>
+</html>

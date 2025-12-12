@@ -1,7 +1,13 @@
-@article{gregor2015draw,
-  title={DRAW: A recurrent neural network for image generation},
-  author={Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
-  journal={arXiv preprint, arXiv:1502.04623},
-  year={2015},
-  url={https://arxiv.org/pdf/1502.04623.pdf}
+@article{PATIL2023100306,
+title = {Efficient quality control of whole slide pathology images with human-in-the-loop training},
+journal = {Journal of Pathology Informatics},
+volume = {14},
+pages = {100306},
+year = {2023},
+issn = {2153-3539},
+doi = {https://doi.org/10.1016/j.jpi.2023.100306},
+url = {https://www.sciencedirect.com/science/article/pii/S2153353923001207},
+author = {Abhijeet Patil and Harsh Diwakar and Jay Sawant and Nikhil Cherian Kurian and Subhash Yadav and Swapnil Rane and Tripti Bameta and Amit Sethi},
+keywords = {WSI pre-processing, Weakly supervised learning, Quality control, Generalization},
+abstract = {Histopathology whole slide images (WSIs) are being widely used to develop deep learning-based diagnostic solutions, especially for precision oncology. Most of these diagnostic softwares are vulnerable to biases and impurities in the training and test data which can lead to inaccurate diagnoses. For instance, WSIs contain multiple types of tissue regions, at least some of which might not be relevant to the diagnosis. We introduce HistoROI, a robust yet lightweight deep learning-based classifier to segregate WSI into 6 broad tissue regions—epithelium, stroma, lymphocytes, adipose, artifacts, and miscellaneous. HistoROI is trained using a novel human in-the-loop and active learning paradigm that ensures variations in training data for labeling efficient generalization. HistoROI consistently performs well across multiple organs, despite being trained on only a single dataset, demonstrating strong generalization. Further, we have examined the utility of HistoROI in improving the performance of downstream deep learning-based tasks using the CAMELYON breast cancer lymph node and TCGA lung cancer datasets. For the former dataset, the area under the receiver operating characteristic curve (AUC) for metastasis versus normal tissue of a neural network trained using weakly supervised learning increased from 0.88 to 0.92 by filtering the data using HistoROI. Similarly, the AUC increased from 0.88 to 0.93 for the classification between adenocarcinoma and squamous cell carcinoma on the lung cancer dataset. We also found that the performance of the HistoROI improves upon HistoQC for artifact detection on a test dataset of 93 annotated WSIs. The limitations of the proposed model are analyzed, and potential extensions are also discussed.}
 }
