@@ -78,6 +78,8 @@ jobs:
           node-version: "20"
       - name: Install Mermaid CLI 🧜
         run: npm install -g @mermaid-js/mermaid-cli
+      - name: Install Chrome headless for Mermaid 🧭
+        run: npx puppeteer browsers install chrome-headless-shell
       # - name: Setup Python 🐍
       #   uses: actions/setup-python@v5
       #   with:
@@ -94,6 +96,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
+          export PUPPETEER_EXECUTABLE_PATH="$(node -p "require('puppeteer').executablePath()")"
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
