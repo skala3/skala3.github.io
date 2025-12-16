@@ -15,14 +15,11 @@
     <meta property="og:description" content="Prioritized Double DQN agent that clears Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training."/>
     <meta property="og:locale" content="en"/>
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Wildfire Smoke Detection"/>
-    <meta name="twitter:description" content="AI-powered early detection of wildfire smoke using Vision-Language Models"/>
+    <meta name="twitter:title" content="Super Mario RL Agent"/>
+    <meta name="twitter:description" content="Prioritized Double DQN agent that clears Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training."/>
     <script type="application/ld+json">
     {
-        "author": {
-          "@type": "Person",
-          "name": "Sarthak Kala"
-        },
+        "author": { "@type": "Person", "name": "Sarthak Kala" },
         "url": "https://skala3.github.io/projects/1_project/",
         "@type": "WebSite",
         "description": "Prioritized Double DQN agent that clears Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training.",
@@ -42,47 +39,155 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light"/>
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://lakshya1230.github.io/projects/1_project/">
+    <link rel="canonical" href="https://skala3.github.io/projects/1_project/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark"/>
     
     <!-- Custom Styles for Project Page -->
     <style>
+        body { background: #f5f7fb; }
         .project-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4f6bdc 0%, #7b9dff 100%);
             color: white;
-            padding: 3rem 0;
-            margin-bottom: 2rem;
+            padding: 3.5rem 0 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            box-shadow: 0 18px 40px rgba(79, 107, 220, 0.25);
         }
+        .project-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 35%),
+                        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.12), transparent 30%),
+                        radial-gradient(circle at 50% 80%, rgba(255,255,255,0.1), transparent 40%);
+            pointer-events: none;
+        }
+        .hero-img {
+            position: relative;
+            z-index: 1;
+            background: white;
+            border-radius: 22px;
+            padding: 0.75rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+        .hero-img img { border-radius: 16px; }
         .tech-badge {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.18);
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.55rem 1rem;
             border-radius: 20px;
             margin: 0.25rem;
             display: inline-block;
             font-size: 0.9rem;
+            letter-spacing: 0.01em;
         }
-        .feature-card {
-            border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .cta-row .btn {
+            min-width: 170px;
+            font-weight: 600;
+            border-radius: 999px;
+            padding: 0.65rem 1.2rem;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+        }
+        .cta-row .btn-outline-light {
+            border-color: rgba(255,255,255,0.8);
+            color: white;
+        }
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+        }
+        .stat-pill {
+            background: rgba(255,255,255,0.14);
+            color: white;
+            padding: 0.45rem 0.9rem;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .section-card {
+            background: white;
+            border-radius: 18px;
+            padding: 2rem;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.08);
             margin-bottom: 1.5rem;
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .stepper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .impact-stat {
-            text-align: center;
+        .step {
+            flex: 1 1 220px;
+            background: #f0f4ff;
+            border: 1px solid #d9e4ff;
+            border-radius: 14px;
+            padding: 1rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+        }
+        .step__icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #4f6bdc;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        .highlight-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #eef3ff 100%);
+            border: 1px solid #e0e7ff;
+            border-radius: 16px;
             padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            margin: 1rem 0;
+            height: 100%;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
-        .impact-stat h3 {
-            color: #e74c3c;
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+        .data-item {
+            background: white;
+            border-radius: 14px;
+            padding: 1.1rem;
+            border: 1px solid #e6e9f2;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+        .data-badge {
+            display: inline-block;
+            padding: 0.35rem 0.7rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #1f2a4d;
+            background: #e8edff;
+            margin-bottom: 0.35rem;
+        }
+        .resource-card {
+            border: none;
+            border-radius: 16px;
+            padding: 1.25rem;
+            color: #1f2a4d;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+        }
+        .resource-card.repo { background: linear-gradient(135deg, #e8edff 0%, #f6f8ff 100%); }
+        .resource-card.pdf { background: linear-gradient(135deg, #fdf1e5 0%, #fffbf6 100%); }
+        .resource-card .btn { border-radius: 12px; font-weight: 600; }
+        @media (max-width: 767px) {
+            .project-hero { padding: 2.75rem 0; }
         }
     </style>
     
@@ -106,23 +211,12 @@
                 </button>
                 <div class="collapse navbar-collapse text-right" id="navbarNav">
                     <ul class="navbar-nav ml-auto flex-nowrap">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">About</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/projects/">Projects<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/repositories/">Repositories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/resume/">Resume</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="/projects/">Projects<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/repositories/">Repositories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
                         <li class="toggle-container">
-                            <button id="light-toggle" title="Change theme">
-                                <i class="fas fa-moon"></i>
-                                <i class="fas fa-sun"></i>
-                            </button>
+                            <button id="light-toggle" title="Change theme"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button>
                         </li>
                     </ul>
                 </div>
@@ -134,7 +228,7 @@
     <div class="project-hero">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <h1 class="display-4 font-weight-bold mb-3">Super Mario RL Agent</h1>
                     <p class="lead mb-4">Prioritized Double DQN agent that learns to finish Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training.</p>
                     <div class="mb-3">
@@ -142,12 +236,21 @@
                         <span class="tech-badge"><i class="fas fa-calendar"></i> 2024</span>
                         <span class="tech-badge"><i class="fas fa-gamepad"></i> Super Mario Bros</span>
                     </div>
+                    <div class="cta-row mb-3 d-flex flex-wrap">
+                        <a href="https://github.com/skala3/super-mario-rl-agent" class="btn btn-light mr-2 mb-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Repo</a>
+                        <a href="https://github.com/skala3/super-mario-rl-agent" class="btn btn-outline-light mb-2" target="_blank" rel="noopener noreferrer"><i class="fas fa-play"></i> Demo / Scripts</a>
+                    </div>
+                    <div class="stats-row">
+                        <span class="stat-pill"><i class="fas fa-flag-checkered"></i> Clears World 1-1</span>
+                        <span class="stat-pill"><i class="fas fa-network-wired"></i> Double DQN + PER</span>
+                        <span class="stat-pill"><i class="fas fa-film"></i> Frame Stack 84x84</span>
+                        <span class="stat-pill"><i class="fas fa-save"></i> Checkpoints & eval</span>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <img src="/assets/img/super-mario.png" 
-                         class="img-fluid rounded shadow-lg" 
-                         alt="Super Mario RL Agent" 
-                         style="max-height: 300px;">
+                <div class="col-lg-6 d-flex justify-content-end text-center">
+                    <div class="hero-img d-inline-block" style="padding: 0.35rem; margin-left: auto; margin-right: -12%;">
+                        <img src="/assets/img/super-mario.png" class="img-fluid" alt="Super Mario RL Agent" style="max-height: 760px; max-width: 760px; width: 105%;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,137 +258,57 @@
 
     <div class="container">
         <div class="post">
-            <!-- Project Overview -->
-            <section class="mb-5">
+            <section class="mb-4 section-card">
                 <h2 class="h3 mb-4"><i class="fas fa-info-circle text-primary"></i> Project Overview</h2>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <p class="lead">
-                            A production-ready reinforcement learning agent that uses a prioritized Double DQN to clear Super Mario Bros World 1-1. The agent
-                            combines frame stacking, reward shaping, and stable target networks to balance exploration and convergence.
-                        </p>
-                        <p>
-                            Training runs ~10k episodes with checkpoints every 100 episodes. Evaluation uses a small amount of test-time exploration (~15% epsilon)
-                            to avoid local optima, achieving full level completion in training and consistent clears during evaluation. Everything is scripted
-                            for repeatable training, evaluation, and checkpoint loading.
-                        </p>
-                    </div>
+                <p class="lead">A production-ready reinforcement learning agent that uses a prioritized Double DQN to clear Super Mario Bros World 1-1. The agent combines frame stacking, reward shaping, and stable target networks to balance exploration and convergence.</p>
+                <p class="mb-0">Training runs ~10k episodes with checkpoints every 100 episodes. Evaluation uses a small amount of test-time exploration (~15% epsilon) to avoid local optima, achieving full level completion in training and consistent clears during evaluation. Everything is scripted for repeatable training, evaluation, and checkpoint loading.</p>
+            </section>
+
+            <section class="mb-4 section-card">
+                <h2 class="h3 mb-4"><i class="fas fa-sitemap text-primary"></i> Method & Pipeline</h2>
+                <div class="stepper">
+                    <div class="step"><div class="step__icon"><i class="fas fa-gamepad"></i></div><div><h6 class="mb-1">Env & Observations</h6><p class="mb-0 text-muted">gym-super-mario-bros, 84x84 grayscale frame stack.</p></div></div>
+                    <div class="step"><div class="step__icon"><i class="fas fa-project-diagram"></i></div><div><h6 class="mb-1">Double DQN</h6><p class="mb-0 text-muted">Target network + prioritized replay.</p></div></div>
+                    <div class="step"><div class="step__icon"><i class="fas fa-gift"></i></div><div><h6 class="mb-1">Reward Shaping</h6><p class="mb-0 text-muted">Forward progress + penalties for idle/death.</p></div></div>
+                    <div class="step"><div class="step__icon"><i class="fas fa-save"></i></div><div><h6 class="mb-1">Checkpoints</h6><p class="mb-0 text-muted">Every 100 episodes; resume/re-eval ready.</p></div></div>
+                    <div class="step"><div class="step__icon"><i class="fas fa-tachometer-alt"></i></div><div><h6 class="mb-1">Evaluation</h6><p class="mb-0 text-muted">Light exploration (~15% epsilon) to avoid local optima.</p></div></div>
                 </div>
             </section>
 
-            <!-- Technology Stack -->
-            <section class="mb-5">
-                <h2 class="h3 mb-4"><i class="fas fa-cogs text-primary"></i> Technology Stack</h2>
+            <section class="mb-4 section-card">
+                <h2 class="h3 mb-4"><i class="fas fa-star text-primary"></i> Key Highlights</h2>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card feature-card">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-brain text-info"></i> RL Techniques</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success"></i> Double DQN with target network</li>
-                                    <li><i class="fas fa-check text-success"></i> Prioritized experience replay</li>
-                                    <li><i class="fas fa-check text-success"></i> Frame stacking (84x84 grayscale)</li>
-                                    <li><i class="fas fa-check text-success"></i> Reward shaping for forward progress</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card feature-card">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-toolbox text-warning"></i> Tooling</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success"></i> PyTorch RL implementation</li>
-                                    <li><i class="fas fa-check text-success"></i> gym-super-mario-bros environment</li>
-                                    <li><i class="fas fa-check text-success"></i> Checkpointed training & eval scripts</li>
-                                    <li><i class="fas fa-check text-success"></i> Logging for training/eval runs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-md-4 mb-3"><div class="highlight-card h-100"><div class="d-flex align-items-start mb-2"><i class="fas fa-flag-checkered text-primary mr-2"></i><h5 class="mb-0">Level Completion</h5></div><p class="mb-0 text-muted">Clears World 1-1 with consistent success; >25 training clears logged.</p></div></div>
+                    <div class="col-md-4 mb-3"><div class="highlight-card h-100"><div class="d-flex align-items-start mb-2"><i class="fas fa-sliders-h text-success mr-2"></i><h5 class="mb-0">Stable Training</h5></div><p class="mb-0 text-muted">Double DQN + PER + target nets to keep learning stable.</p></div></div>
+                    <div class="col-md-4 mb-3"><div class="highlight-card h-100"><div class="d-flex align-items-start mb-2"><i class="fas fa-save text-warning mr-2"></i><h5 class="mb-0">Reproducible</h5></div><p class="mb-0 text-muted">Checkpointed runs, scripted eval, and logging for reproducibility.</p></div></div>
                 </div>
             </section>
 
-            <!-- Key Features -->
-            <section class="mb-5">
-                <h2 class="h3 mb-4"><i class="fas fa-star text-primary"></i> Key Features</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card feature-card h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-gamepad fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Level Completion</h5>
-                                <p class="card-text">Trains to fully clear World 1-1 with 25 successful completions in training and reliable clears in evaluation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card feature-card h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-random fa-3x text-success mb-3"></i>
-                                <h5 class="card-title">Stable Training</h5>
-                                <p class="card-text">Double DQN, target networks, and prioritized replay reduce instability and overestimation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card feature-card h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-download fa-3x text-warning mb-3"></i>
-                                <h5 class="card-title">Reproducible Runs</h5>
-                                <p class="card-text">Checkpoints every 100 episodes plus evaluation script with tunable epsilon for inference.</p>
-                            </div>
-                        </div>
-                    </div>
+            <section class="mb-4 section-card">
+                <h2 class="h3 mb-4"><i class="fas fa-globe text-primary"></i> Results & Notes</h2>
+                <div class="data-grid">
+                    <div class="data-item"><div class="data-badge"><i class="fas fa-check-circle"></i> Completions</div><p class="mb-0 text-muted">25+ successful clears of World 1-1 during training.</p></div>
+                    <div class="data-item"><div class="data-badge"><i class="fas fa-film"></i> Frames</div><p class="mb-0 text-muted">84x84 grayscale frame stack for stable state encoding.</p></div>
+                    <div class="data-item"><div class="data-badge"><i class="fas fa-gift"></i> Rewards</div><p class="mb-0 text-muted">Shaped rewards for forward progress; penalties for death/idle.</p></div>
+                    <div class="data-item"><div class="data-badge"><i class="fas fa-play"></i> Eval</div><p class="mb-0 text-muted">Light exploration (~15% epsilon) at eval to avoid local optima.</p></div>
                 </div>
             </section>
 
-            <!-- Impact & Applications -->
-            <section class="mb-5">
-                <h2 class="h3 mb-4"><i class="fas fa-globe text-primary"></i> Results & Takeaways</h2>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5><i class="fas fa-flag-checkered text-success"></i> Completion</h5>
-                        <p>Training: 25 successful full clears; Evaluation: ~5% completion with epsilon=0.15 to avoid local optima.</p>
-                        <h5><i class="fas fa-tachometer-alt text-info"></i> Progress</h5>
-                        <p>Average progress 48% through the level, best X position hits end-of-level flag (3161/3161).</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <h5><i class="fas fa-chess-knight text-warning"></i> Exploration</h5>
-                        <p>Slow epsilon decay and residual exploration at test time prevent the agent from getting stuck in local policies.</p>
-                        <h5><i class="fas fa-book text-success"></i> Reproducibility</h5>
-                        <p>Scripts for training and evaluation with pinned hyperparameters and checkpoint loading for quick experimentation.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Project Links -->
-            <section class="mb-5">
+            <section class="mb-5 section-card">
                 <h2 class="h3 mb-4"><i class="fas fa-external-link-alt text-primary"></i> Project Resources</h2>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fab fa-github"></i> Source Code</h5>
-                                <p class="card-text">Access the complete implementation and documentation on GitHub.</p>
-                                <a href="https://github.com/skala3/super-mario-rl-agent" 
-                                   class="btn btn-primary" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer">
-                                    <i class="fab fa-github"></i> View Repository
-                                </a>
-                            </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="resource-card repo h-100">
+                            <div class="d-flex align-items-center mb-2"><i class="fab fa-github mr-2"></i><h5 class="mb-0">Source Code</h5></div>
+                            <p class="mb-3 text-muted">Training, evaluation, and logging scripts for the prioritized Double DQN Mario agent.</p>
+                            <a href="https://github.com/skala3/super-mario-rl-agent" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Repository</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-file-alt"></i> Documentation</h5>
-                                <p class="card-text">Comprehensive technical documentation and API references.</p>
-                                <a href="#" class="btn btn-outline-primary">
-                                    <i class="fas fa-book"></i> Read Documentation
-                                </a>
-                            </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="resource-card pdf h-100">
+                            <div class="d-flex align-items-center mb-2"><i class="fas fa-film mr-2"></i><h5 class="mb-0">Demo / Scripts</h5></div>
+                            <p class="mb-3 text-muted">Evaluation and checkpointed runs to reproduce clears.</p>
+                            <a href="https://github.com/skala3/super-mario-rl-agent" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-play"></i> Run Agent</a>
                         </div>
                     </div>
                 </div>
@@ -295,10 +318,10 @@
 
     <footer class="fixed-bottom">
         <div class="container mt-0">
-            © Copyright 2025 Sarthak Kala. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> 
-            based on <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. 
-            Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. 
-            Last updated: August 10, 2025.
+            © Copyright 2025 Sarthak Kala. Powered by
+            <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>
+            based on <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme.
+            Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
         </div>
     </footer>
 
@@ -317,3 +340,4 @@
     <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 </body>
 </html>
+
