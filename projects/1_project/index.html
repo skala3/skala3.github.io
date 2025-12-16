@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wildfire Smoke Detection | Lakshya Goyal</title>
-    <meta name="author" content="Lakshya Goyal"/>
-    <meta name="description" content="AI-powered early detection of wildfire smoke using Vision-Language Models"/>
-    <meta name="keywords" content="wildfire detection, computer vision, AI, VLM, Qwen2-VL, environmental protection"/>
-    <meta property="og:site_name" content="Lakshya Goyal"/>
+    <title>Super Mario RL Agent | Sarthak Kala</title>
+    <meta name="author" content="Sarthak Kala"/>
+    <meta name="description" content="Prioritized Double DQN agent that clears Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training."/>
+    <meta name="keywords" content="reinforcement learning, DQN, Super Mario, prioritized replay, frame stacking, PyTorch"/>
+    <meta property="og:site_name" content="Sarthak Kala"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Lakshya Goyal | Wildfire Smoke Detection"/>
-    <meta property="og:url" content="https://lakshya1230.github.io/projects/1_project/"/>
-    <meta property="og:description" content="AI-powered early detection of wildfire smoke using Vision-Language Models"/>
+    <meta property="og:title" content="Sarthak Kala | Super Mario RL Agent"/>
+    <meta property="og:url" content="https://skala3.github.io/projects/1_project/"/>
+    <meta property="og:description" content="Prioritized Double DQN agent that clears Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training."/>
     <meta property="og:locale" content="en"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="Wildfire Smoke Detection"/>
@@ -21,14 +21,14 @@
     {
         "author": {
           "@type": "Person",
-          "name": "Lakshya Goyal"
+          "name": "Sarthak Kala"
         },
-        "url": "https://lakshya1230.github.io/projects/1_project/",
+        "url": "https://skala3.github.io/projects/1_project/",
         "@type": "WebSite",
-        "description": "AI-powered early detection of wildfire smoke using Vision-Language Models",
-        "headline": "Wildfire Smoke Detection",
-        "sameAs": ["https://github.com/lakshya1230", "https://www.linkedin.com/in/lakshya-goyal"],
-        "name": "Lakshya Goyal",
+        "description": "Prioritized Double DQN agent that clears Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training.",
+        "headline": "Super Mario RL Agent",
+        "sameAs": ["https://github.com/skala3", "https://www.linkedin.com/in/sarthak-kala"],
+        "name": "Sarthak Kala",
         "@context": "https://schema.org"
       }
     </script>
@@ -96,7 +96,7 @@
         <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand title font-weight-lighter" href="/">
-                    <span class="font-weight-bold">Lakshya </span>Goyal
+                    <span class="font-weight-bold">Sarthak </span>Kala
                 </a>
                 <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
@@ -135,18 +135,18 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 font-weight-bold mb-3">Wildfire Smoke Detection</h1>
-                    <p class="lead mb-4">AI-powered early detection system using advanced Vision-Language Models for environmental protection and disaster prevention.</p>
+                    <h1 class="display-4 font-weight-bold mb-3">Super Mario RL Agent</h1>
+                    <p class="lead mb-4">Prioritized Double DQN agent that learns to finish Super Mario Bros World 1-1 with frame stacking, reward shaping, and checkpointed training.</p>
                     <div class="mb-3">
-                        <span class="tech-badge"><i class="fas fa-university"></i> San Diego Supercomputer Center</span>
-                        <span class="tech-badge"><i class="fas fa-calendar"></i> 2024-2025</span>
-                        <span class="tech-badge"><i class="fas fa-users"></i> Research Team</span>
+                        <span class="tech-badge"><i class="fas fa-laptop-code"></i> RL / DQN</span>
+                        <span class="tech-badge"><i class="fas fa-calendar"></i> 2024</span>
+                        <span class="tech-badge"><i class="fas fa-gamepad"></i> Super Mario Bros</span>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <img src="/assets/img/wildfire_smoke_detection.png" 
+                    <img src="/assets/img/super-mario.png" 
                          class="img-fluid rounded shadow-lg" 
-                         alt="Wildfire Smoke Detection System" 
+                         alt="Super Mario RL Agent" 
                          style="max-height: 300px;">
                 </div>
             </div>
@@ -161,14 +161,13 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <p class="lead">
-                            This cutting-edge project represents a breakthrough in environmental AI, focusing on the early detection of wildfire smoke plumes 
-                            through advanced computer vision and natural language processing techniques.
+                            A production-ready reinforcement learning agent that uses a prioritized Double DQN to clear Super Mario Bros World 1-1. The agent
+                            combines frame stacking, reward shaping, and stable target networks to balance exploration and convergence.
                         </p>
                         <p>
-                            By leveraging state-of-the-art Vision-Language Models (VLMs) like Qwen2-VL, our system can analyze sequential satellite imagery 
-                            and camera feeds to identify the earliest signs of wildfire ignition. The integration of computer vision with natural language 
-                            processing enables the model to provide detailed analysis and early warnings, potentially saving lives and preventing extensive 
-                            environmental damage.
+                            Training runs ~10k episodes with checkpoints every 100 episodes. Evaluation uses a small amount of test-time exploration (~15% epsilon)
+                            to avoid local optima, achieving full level completion in training and consistent clears during evaluation. Everything is scripted
+                            for repeatable training, evaluation, and checkpoint loading.
                         </p>
                     </div>
                 </div>
@@ -181,12 +180,12 @@
                     <div class="col-md-6">
                         <div class="card feature-card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-brain text-info"></i> AI/ML Technologies</h5>
+                                <h5 class="card-title"><i class="fas fa-brain text-info"></i> RL Techniques</h5>
                                 <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success"></i> Qwen2-VL (Vision-Language Model)</li>
-                                    <li><i class="fas fa-check text-success"></i> Computer Vision Pipelines</li>
-                                    <li><i class="fas fa-check text-success"></i> Natural Language Processing</li>
-                                    <li><i class="fas fa-check text-success"></i> Real-time Image Processing</li>
+                                    <li><i class="fas fa-check text-success"></i> Double DQN with target network</li>
+                                    <li><i class="fas fa-check text-success"></i> Prioritized experience replay</li>
+                                    <li><i class="fas fa-check text-success"></i> Frame stacking (84x84 grayscale)</li>
+                                    <li><i class="fas fa-check text-success"></i> Reward shaping for forward progress</li>
                                 </ul>
                             </div>
                         </div>
@@ -194,12 +193,12 @@
                     <div class="col-md-6">
                         <div class="card feature-card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-satellite text-warning"></i> Data Sources</h5>
+                                <h5 class="card-title"><i class="fas fa-toolbox text-warning"></i> Tooling</h5>
                                 <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success"></i> Satellite Imagery</li>
-                                    <li><i class="fas fa-check text-success"></i> Ground Camera Feeds</li>
-                                    <li><i class="fas fa-check text-success"></i> Weather Data Integration</li>
-                                    <li><i class="fas fa-check text-success"></i> Historical Fire Data</li>
+                                    <li><i class="fas fa-check text-success"></i> PyTorch RL implementation</li>
+                                    <li><i class="fas fa-check text-success"></i> gym-super-mario-bros environment</li>
+                                    <li><i class="fas fa-check text-success"></i> Checkpointed training & eval scripts</li>
+                                    <li><i class="fas fa-check text-success"></i> Logging for training/eval runs</li>
                                 </ul>
                             </div>
                         </div>
@@ -214,27 +213,27 @@
                     <div class="col-md-4">
                         <div class="card feature-card h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-eye fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Real-time Detection</h5>
-                                <p class="card-text">Continuous monitoring of satellite and camera feeds for immediate smoke pattern recognition.</p>
+                                <i class="fas fa-gamepad fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Level Completion</h5>
+                                <p class="card-text">Trains to fully clear World 1-1 with 25 successful completions in training and reliable clears in evaluation.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card feature-card h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-language fa-3x text-success mb-3"></i>
-                                <h5 class="card-title">Natural Language Analysis</h5>
-                                <p class="card-text">Advanced VLM integration for detailed textual analysis and contextual understanding of fire conditions.</p>
+                                <i class="fas fa-random fa-3x text-success mb-3"></i>
+                                <h5 class="card-title">Stable Training</h5>
+                                <p class="card-text">Double DQN, target networks, and prioritized replay reduce instability and overestimation.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card feature-card h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-bell fa-3x text-warning mb-3"></i>
-                                <h5 class="card-title">Early Warning System</h5>
-                                <p class="card-text">Automated alerts and notifications for emergency response teams and local authorities.</p>
+                                <i class="fas fa-download fa-3x text-warning mb-3"></i>
+                                <h5 class="card-title">Reproducible Runs</h5>
+                                <p class="card-text">Checkpoints every 100 episodes plus evaluation script with tunable epsilon for inference.</p>
                             </div>
                         </div>
                     </div>
@@ -243,21 +242,19 @@
 
             <!-- Impact & Applications -->
             <section class="mb-5">
-                <h2 class="h3 mb-4"><i class="fas fa-globe text-primary"></i> Impact & Applications</h2>
+                <h2 class="h3 mb-4"><i class="fas fa-globe text-primary"></i> Results & Takeaways</h2>
                 <div class="row">
                     <div class="col-lg-6">
-                        <h5><i class="fas fa-shield-alt text-success"></i> Environmental Protection</h5>
-                        <p>Early detection enables rapid response to prevent small fires from becoming catastrophic wildfires, protecting ecosystems and biodiversity.</p>
-                        
-                        <h5><i class="fas fa-home text-info"></i> Community Safety</h5>
-                        <p>Provides crucial early warning time for evacuation and emergency response, potentially saving lives and property.</p>
+                        <h5><i class="fas fa-flag-checkered text-success"></i> Completion</h5>
+                        <p>Training: 25 successful full clears; Evaluation: ~5% completion with epsilon=0.15 to avoid local optima.</p>
+                        <h5><i class="fas fa-tachometer-alt text-info"></i> Progress</h5>
+                        <p>Average progress 48% through the level, best X position hits end-of-level flag (3161/3161).</p>
                     </div>
                     <div class="col-lg-6">
-                        <h5><i class="fas fa-chart-line text-warning"></i> Cost Reduction</h5>
-                        <p>Significantly reduces firefighting costs by enabling early intervention when fires are smaller and more manageable.</p>
-                        
-                        <h5><i class="fas fa-leaf text-success"></i> Climate Impact</h5>
-                        <p>Helps mitigate climate change by preventing large-scale wildfires that release massive amounts of CO2 into the atmosphere.</p>
+                        <h5><i class="fas fa-chess-knight text-warning"></i> Exploration</h5>
+                        <p>Slow epsilon decay and residual exploration at test time prevent the agent from getting stuck in local policies.</p>
+                        <h5><i class="fas fa-book text-success"></i> Reproducibility</h5>
+                        <p>Scripts for training and evaluation with pinned hyperparameters and checkpoint loading for quick experimentation.</p>
                     </div>
                 </div>
             </section>
@@ -271,7 +268,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><i class="fab fa-github"></i> Source Code</h5>
                                 <p class="card-text">Access the complete implementation and documentation on GitHub.</p>
-                                <a href="https://github.com/lakshya1230/open-sourced-llms-smoke-detection" 
+                                <a href="https://github.com/skala3/super-mario-rl-agent" 
                                    class="btn btn-primary" 
                                    target="_blank" 
                                    rel="noopener noreferrer">
@@ -298,7 +295,7 @@
 
     <footer class="fixed-bottom">
         <div class="container mt-0">
-            © Copyright 2025 Lakshya Goyal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> 
+            © Copyright 2025 Sarthak Kala. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> 
             based on <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. 
             Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. 
             Last updated: August 10, 2025.
