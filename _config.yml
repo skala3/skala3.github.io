@@ -1,0 +1,32 @@
+title: "Sarthak Kala"
+description: "Sarthak Kala's academic website."
+url: "https://skala3.github.io"
+baseurl: ""
+lang: en
+permalink: pretty
+
+giscus:
+  repo: "skala3/skala3.github.io"
+
+exclude:
+  - _site
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - package-lock.json
+  - yarn.lock
+  - purgecss.config.js
+  - README.md
+  - INSTALL.md
+  - CUSTOMIZE.md
+  - FAQ.md
+  - CONTRIBUTING.md
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Keep default plugins minimal to avoid CI dependency issues.
+plugins: []
