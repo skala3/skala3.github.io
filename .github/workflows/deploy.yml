@@ -80,6 +80,8 @@ jobs:
         run: npm install -g @mermaid-js/mermaid-cli
       - name: Install Chrome headless for Mermaid 🧭
         run: npx puppeteer browsers install chrome-headless-shell
+      - name: Install Puppeteer runtime 📦
+        run: npm install puppeteer
       # - name: Setup Python 🐍
       #   uses: actions/setup-python@v5
       #   with:
